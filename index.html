@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000" />
+  
+  
+  <!-- font awsome -->
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      />
+
+  <!-- icons google -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  
+
+  <title>My Landing Page</title>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style/style.css">
+  
+  <!--favicon-->
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  
+  <!--header start-->
+  <header>
+    <div class="logo">
+      <a href="index-2.html"><img src="images/logo.png" alt="logo"></a>
+      <span>Mah<b>jan H</b></span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="https://portfolio.tirtanadidasger.repl.co">Fortpolio</a></li>
+        <li><a href="index-2.html#about">About</a></li>
+        <li><a href="index-2.html#gallery">Gallery</a></li>
+        <li><a href="index-2.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn"><span class="fa-solid fa-fill-drip"></span></a>
+      <div class="dropdown-content">
+        <label>Color Mode</label>
+        <a onclick="setTheme('green')"><span class="fa-solid fa-palette color color-green"></span></a>
+        <a onclick="setTheme('gold')"><span class="fa-solid fa-palette color color-gold"></span></a>
+        <a onclick="setTheme('red')"><span class="fa-solid fa-palette color color-red"></span></a>
+        <a onclick="setTheme('blue')"><span class="fa-solid fa-palette color color-blue"></span></a>
+        <a onclick="setTheme('white')"><span class="fa-solid fa-palette color color-white"></span></a>
+        <a onclick="setTheme('skyblue')"><span class="fa-solid fa-palette color color-skyblue"></span></a>
+        <a onclick="setTheme('pink')"><span class="fa-solid fa-palette color color-pink"></span></a>
+      </div>
+    </div>
+    <div class="sosmed">
+      <a class="facebook" href="https://www.facebook.com/mahjan.hidayatulloh.9"><span class="fa-brands fa-square-facebook"></span></a>
+      <a class="instagram" href="https://instagram.com/jan159951"><span class="fa-brands fa-square-instagram"></span></a>
+      <a class="telegram" href="https://t.me/mahzan123"><span class="fa-brands fa-telegram"></span></a>
+    </div>
+  </header>
+  <!--header end-->
+  
+  <!-- hamburger menu -->
+  <div class="hamburger" onclick="hamburger(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    
+    <div class="sidebar">
+      <ul>
+        <li><a href="https://portfolio.tirtanadidasger.repl.co">Fortpolio</a></li>
+        <li><a href="index-2.html#about">About</a></li>
+        <li><a href="index-2.html#gallery">Gallery</a></li>
+        <li><a href="index-2.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <!--home start-->
+  <section class="container">
+    <div class="welcom">
+      <span>SELAMAT DATANG!</span>
+    </div>
+    <div class="banner">
+      <div class="hero">
+        <div class="jam_ku">
+          
+          <!-- jam analog -->
+          <div class="jam_analog">
+            <div class="xxx">
+              <div class="angka12">12</div>
+              <div class="angka6">6</div>
+              <div class="angka3">3</div>
+              <div class="angka9">9</div>
+              <div class="jarum jarum_detik"></div>
+              <div class="jarum jarum_menit"></div>
+              <div class="jarum jarum_jam"></div>
+              <div class="lingkaran_tengah"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- jam digital -->
+        <div class="jam_digital">
+          <div class="kotak">
+            <p id="jam"></p>
+          </div>
+          <div class="kotak">
+            <p id="menit"></p>
+          </div>
+          <div class="kotak">
+            <p id="detik"></p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="sub-hero">
+        <span class="slogan">'Time Is Money'</span>
+        <p class="sub-slogan"><b style="font-size: 1.2em">STOP!!</b> Duduk manis Berdiam diri <br> Menanti <b>Keajaiban.</b> <br> Gunakanlah waktumu untuk sesuatu <br> yang lebih <b>bermanfaat.</b></p>
+        <div class="btn-chat" style="display: flex; justify-content: center;">
+          <a class="button" href="index-2.html" style="display: flex; justify-content: center; gap: 5px; width: 40%;">
+            <span class="icon-chat fa fa-solid fa-person"></span>
+            <span class="text-chat">See More..</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--home end-->
+    
+  <!-- footer start -->
+  <footer>
+    <span>-- Mahjan H 2023 ♥️ --</span>
+  </footer>
+  <!-- footer end -->
+  
+  
+  <script src="style/main.js"></script>
+</body>
+</html>

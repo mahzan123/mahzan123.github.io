@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000" />
+  
+  
+  <!-- font awsome -->
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      />
+
+  <!-- icons google -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  
+
+  <title>My Website</title>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style/style.css">
+  
+  <!--favicon-->
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+
+<body id="home">
+  
+  <!--header start-->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+      <span>Mah<b>jan H</b></span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="https://portfolio.tirtanadidasger.repl.co">Fortpolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="dropdown">
+      <a class="dropbtn"><span class="fa-solid fa-fill-drip"></span></a>
+      <div class="dropdown-content">
+        <label>Color Mode</label>
+        <a onclick="setTheme('green')"><span class="fa-solid fa-palette color color-green"></span></a>
+        <a onclick="setTheme('gold')"><span class="fa-solid fa-palette color color-gold"></span></a>
+        <a onclick="setTheme('red')"><span class="fa-solid fa-palette color color-red"></span></a>
+        <a onclick="setTheme('blue')"><span class="fa-solid fa-palette color color-blue"></span></a>
+        <a onclick="setTheme('white')"><span class="fa-solid fa-palette color color-white"></span></a>
+        <a onclick="setTheme('skyblue')"><span class="fa-solid fa-palette color color-skyblue"></span></a>
+        <a onclick="setTheme('pink')"><span class="fa-solid fa-palette color color-pink"></span></a>
+      </div>
+    </div>
+    <div class="sosmed">
+      <a class="facebook" href="https://www.facebook.com/mahjan.hidayatulloh.9"><span class="fa-brands fa-square-facebook"></span></a>
+      <a class="instagram" href="https://instagram.com/jan159951"><span class="fa-brands fa-square-instagram"></span></a>
+      <a class="telegram" href="https://t.me/mahzan123"><span class="fa-brands fa-telegram"></span></a>
+    </div>
+  </header>
+  <!--header end-->
+  
+  <!-- hamburger menu -->
+  <div class="hamburger" onclick="hamburger(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    
+    <div class="sidebar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="https://portfolio.tirtanadidasger.repl.co">Fortpolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <!--home start-->
+  <section class="container">
+    <div class="welcom">
+      <span>SELAMAT DATANG!</span>
+    </div>
+    <div class="banner">
+      <div class="hero">
+        <div class="jam_ku">
+          
+          <!-- jam analog -->
+          <div class="jam_analog">
+            <div class="xxx">
+              <div class="angka12">12</div>
+              <div class="angka6">6</div>
+              <div class="angka3">3</div>
+              <div class="angka9">9</div>
+              <div class="jarum jarum_detik"></div>
+              <div class="jarum jarum_menit"></div>
+              <div class="jarum jarum_jam"></div>
+              <div class="lingkaran_tengah"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- jam digital -->
+        <div class="jam_digital">
+          <div class="kotak">
+            <p id="jam"></p>
+          </div>
+          <div class="kotak">
+            <p id="menit"></p>
+          </div>
+          <div class="kotak">
+            <p id="detik"></p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="sub-hero">
+        <span class="slogan">'Time Is Money'</span>
+        <p class="sub-slogan"><b style="font-size: 1.2em">STOP!!</b> Duduk manis Berdiam diri <br> Menanti <b>Keajaiban.</b> <br> Gunakanlah waktumu untuk sesuatu <br> yang lebih <b>bermanfaat.</b></p>
+        <div class="btn-chat">
+          <button class="button" onclick="chat()">
+            <span class="icon-chat fa fa-brands fa-whatsapp"></span>
+            <span class="text-chat">Hubungi saya</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--home end-->
+  
+  <!--about start-->
+  <section id="about" class="container-about">
+    <h2 class="sub-about">Tentang saya</h2>
+    <div class="hero-about">
+      <img src="images/11.jpg" alt="">
+    </div>
+    <div class="about">
+      <h4>Mengenal saya lebih dalam</h4>
+      <span style="font-size: 20px; font-weight: bold">Hallo..</span>
+      <span>Nama saya mahjan hidayatulloh, Biasa di panggil Jan / Mahjan.</span>
+      <span> Saya merupakan pribadi yang introvert, terkadang saya juga bisa jadi orang yang extrovert tergantung situasi dan kondisi 😉.
+      </span>
+      <span> Umur saya 24 tahun. saat website ini di buat saya masih bekerja di sebuah jasa maintenance AC "RINJANI TEKNIK".</span>
+      <span> Keseharian saya selain bekerja di rinjani teknik, saya juga sedang mengasah skill saya dalam dunia Programing, khususnya di bidang Web Development.</span>
+    </div>
+  </section>
+  <!--about end-->
+  
+  <!--gallery start-->
+  <section id="gallery" class="container-galeri">
+    <h2 class="sub-galeri">Galeri Ku</h2>
+    <div class="galeri">
+      <div class="foto">
+        <h5>• Foto</h5>
+        <a href="images/1.jpg"><img src="images/1.jpg" alt="gambar"></a>
+        <a href="images/2.jpg"><img src="images/2.jpg" alt="gambar"></a>
+        <a href="images/3.jpg"><img src="images/3.jpg" alt="gambar"></a>
+        <a href="images/4.jpg"><img src="images/4.jpg" alt="gambar"></a>
+        <a href="images/5.jpg"><img src="images/5.jpg" alt="gambar"></a>
+        <a href="images/6.jpg"><img src="images/6.jpg" alt="gambar"></a>
+        <a href="images/7.jpg"><img src="images/7.jpg" alt="gambar"></a>
+        <a href="images/8.jpg"><img src="images/8.jpg" alt="gambar"></a>
+        <a href="images/9.jpg"><img src="images/9.jpg" alt="gambar"></a>
+        <a href="images/10.jpg"><img src="images/10.jpg" alt="gambar"></a>
+        <a href="images/11.jpg"><img src="images/11.jpg" alt="gambar"></a>
+        <a href="images/12.jpg"><img src="images/12.jpg" alt="gambar"></a>
+        <a href="images/13.jpg"><img src="images/13.jpg" alt="gambar"></a>
+        <a href="images/14.jpg"><img src="images/14.jpg" alt="gambar"></a>
+        <a href="images/15.jpg"><img src="images/15.jpg" alt="gambar"></a>
+        <a href="images/16.jpg"><img src="images/16.jpg" alt="gambar"></a>
+      </div>
+      <div class="foto-slider">
+        <div class="wrapper">
+          <img src="images/2.jpg" alt="gambar">
+          <img src="images/11.jpg" alt="gambar">
+          <img src="images/4.jpg" alt="gambar">
+          <img src="images/10.jpg" alt="gambar">
+        </div>
+      </div>
+    </div>
+    <div class="vidioKu">
+      <h5>• Video</h5>
+      <a href="videos/1.mp4">
+        <video src="videos/1.mp4"></video>
+      </a>
+      <a href="videos/2.mp4">
+        <video src="videos/2.mp4"></video>
+      </a>
+    </div>
+  </section>
+  <!--Gallery end-->
+  
+  <!--Contact start-->
+  <section id="contact" class="container-kontak">
+    <h2 class="sub-kontak">Kontak</h2>
+    <div class="content">
+      <div class="my-contact">
+        <div class="contact">
+          <div class="list-contact">
+            <span class="fa-solid fa-envelope"></span>
+            <span>tirtanadixxxxxx@gmail.com</span>
+          </div>
+          <div class="list-contact">
+            <span class="fa-solid fa-phone"></span>
+            <span>0859 345 xxx xx</span>
+          </div>
+          <div class="list-contact">
+            <span class="fa-brands fa-square-facebook"></span>
+            <span>Mahjan Hidayatulloh</span>
+          </div>
+          <div class="list-contact">
+            <span class="fa-brands fa-square-instagram"></span>
+            <span>Jan159951</span>
+          </div>
+          <div class="list-contact">
+            <span class="fa-brands fa-telegram"></span>
+            <span>0859 345 xxx xx</span>
+          </div>
+        </div>
+      </div>
+      <div class="peta">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32545.510457614382!2d116.60366600000002!3d-8.604605049999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcc489c17c6473d%3A0x494c66fa69ae95be!2sTirtanadi%2C%20Kec.%20Labuhan%20H.%2C%20Kabupaten%20Lombok%20Timur%2C%20Nusa%20Tenggara%20Bar.!5e1!3m2!1sid!2sid!4v1688215846963!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+  <!--Contact end-->
+  
+  <!-- music start -->
+  <section class="my-music">
+    <div class="music-container" id="music-container">
+      <div class="music-info">
+        <h6 id="title"></h6>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+      <audio src="music/Polo G – I Know.mp3" id="audio"></audio>
+      <div class="img-container">
+        <img src="music-images/Polo G – I Know.jpg" alt="music-cover" id="cover" />
+      </div>
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- music end -->
+    
+  <!-- footer start -->
+  <footer>
+    <span>-- Mahjan H 2023 ♥️ --</span>
+  </footer>
+  <!-- footer end -->
+  
+  <script src="style/main.js"></script>
+  <script src="style/music.js"></script>
+</body>
+</html>
