@@ -700,7 +700,7 @@ header .dropdown {
 
 .vidioKu {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   position: relative;
   padding: 25px 0 0 0;
   border-left: 1.5px solid rgba(250, 250, 250, .7);
