@@ -4,15 +4,14 @@ function hamburger(x) {
 }
 
 //toggle mode
-const setTheme = theme => document.documentElement.className = theme;
-/*const setTheme = (theme) => {
+const setTheme = (theme) => {
   document.documentElement.className = theme;
-  localStorage.setItem('theme', theme);
-}*/
+  localStorage.setItem('theme',theme);
+}
 
 const getTheme = () => {
   const theme = localStorage.getItem('theme');
-  theme && setTheme('theme');
+  theme && setTheme(theme);
 }
 
 getTheme();
