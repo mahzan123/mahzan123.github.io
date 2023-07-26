@@ -26,6 +26,12 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style/style.css">
   
+  <!-- Animate css -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  
   <!--favicon-->
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
@@ -34,7 +40,7 @@
   
   <!--header start-->
   <header>
-    <div class="logo">
+    <div class="logo animate__animated animate__slideInRight">
       <a href="index.html"><img src="images/logo.png" alt="logo"></a>
       <span>Mah<b>jan H</b></span>
     </div>
@@ -228,7 +234,7 @@
         </div>
       </div>
       <div class="peta">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32545.510457614382!2d116.60366600000002!3d-8.604605049999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcc489c17c6473d%3A0x494c66fa69ae95be!2sTirtanadi%2C%20Kec.%20Labuhan%20H.%2C%20Kabupaten%20Lombok%20Timur%2C%20Nusa%20Tenggara%20Bar.!5e1!3m2!1sid!2sid!4v1688215846963!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32545.510457614382!2d116.60366600000002!3d-8.604605049999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcc489c17c6473d%3A0x494c66fa69ae95be!2sTirtanadi%2C%20Kec.%20Labuhan%20H.%2C%20Kabupaten%20Lombok%20Timur%2C%20Nusa%20Tenggara%20Bar.!5e1!3m2!1sid!2sid!4v1688215846963!5m2!1sid!2sid" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -261,9 +267,15 @@
     </div>
   </section>
   <!-- music end -->
+  
+  <!--dark & light mode-->
+  <div class="back-color">
+    <a class="colorBtn dark" onclick="setTheme('dark')"><span class="fa-solid fa-moon color color-dark"></span></a>
+    <a class="colorBtn light" onclick="setTheme('light')"><span class="fa-solid fa-sun color color-light"></span></a>
+  </div>
     
   <!-- footer start -->
-  <footer>
+  <footer class="footer">
     <span>-- Mahjan H 2023 ♥️ --</span>
   </footer>
   <!-- footer end -->
