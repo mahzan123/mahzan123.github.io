@@ -4,45 +4,56 @@
 :root,
 :root.green {
   --bg-color: #25d366;
-  --text-color: #fff;
   --box-shadow: 1px 3px 5px #25d366;
 }
 
-.gold {
+:root.gold {
   --bg-color: gold;
-  --text-color: #000;
   --box-shadow: 1px 3px 5px gold;
 }
 
 :root.red {
   --bg-color: darkred;
-  --text-color: #fff;
   --box-shadow: 1px 3px 5px darkred;
 }
 
 :root.blue {
   --bg-color: blue;
-  --text-color: #fff;
   --box-shadow: 1px 3px 5px blue;
 }
 
 :root.white {
   --bg-color: whitesmoke;
-  --text-color: #fff;
   --box-shadow: 1px 3px 5px whitesmoke;
 }
 
 :root.skyblue {
   --bg-color: deepskyblue;
-  --text-color: #fff;
   --box-shadow: 1px 3px 5px deepskyblue;
 }
 
 :root.pink {
   --bg-color: #F615F2;
-  --text-color: #fff;
   --box-shadow: 1px 3px 5px #F615F2;
 }
+
+
+:root,
+:root.dark {
+  --bg-color: #888;
+  --body-color: #000;
+  --text-color: rgba(250,250,250, 1);
+  --text-color-1: #000;
+  --box-shadow: 1px 3px 5px #888;
+}
+
+:root.light {
+  --body-color: whitesmoke;
+  --text-color: rgba(0,0,0, 1);
+  --text-color-1: whitesmoke;
+  --box-shadow: 1px 3px 5px #333;
+}
+
 
 * {
   margin: 0;
@@ -53,7 +64,8 @@ body {
   font-family: 'ubuntu', sans-serif;
   letter-spacing: 1.3px;
   border: 2px solid var(--bg-color);
-  background-color: black;
+  background-color: var(--body-color);
+  transition: all ease-in .5s;
 }
 
 /*header start*/
@@ -66,7 +78,8 @@ header {
   border-bottom: .5px solid var(--bg-color);
   border-right: 2px solid var(--bg-color);
   gap: 38px;
-  background-color: #000;
+  background-color: var(--body-color);
+  transition: all ease-in .5s;
   position: fixed;
   top: 0;
   z-index: 9;
@@ -87,7 +100,7 @@ header .logo {
 .logo a img {
   width: 50px;
   height: 50px;
-  transition: .5s;
+  transition: .3s;
 }
 
 .logo a img:hover {
@@ -104,13 +117,15 @@ header .logo {
 }
 
 .logo span {
-  color: whitesmoke;
+  color: var(--text-color);
+  transition: all ease-in .5s;
   font-weight: bold;
   font-size: 13px;
 }
 
 .logo span b {
   color: var(--bg-color);
+  transition: all ease-in .5s;
 }
 
 header nav {
@@ -134,7 +149,8 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-size: 12px;
-  color: whitesmoke;
+  color: var(--text-color);
+  transition: all ease-in .5s;
   cursor: pointer;
   opacity: .6;
   transition: all ease-in-out .3s;
@@ -142,6 +158,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: var(--bg-color);
+  transition: all ease-in .5s;
 }
 
 nav ul li #active {
@@ -156,13 +173,15 @@ header .sosmed {
 
 header .sosmed a span {
   font-size: 25px;
-  color: rgba(250, 250, 250, .6);
+  color: var(--text-color);
+  transition: all ease-in .5s;
+  opacity: .6;
   cursor: pointer;
-  transition: all ease-in-out .3s;
 }
 
 header .sosmed a span:hover {
   color: var(--bg-color);
+  transition: all ease-in .5s;
   opacity: .6;
 }
 
@@ -175,6 +194,7 @@ header .dropdown {
 .dropdown .dropbtn span {
   font-size: 25px;
   color: var(--bg-color);
+  transition: all ease-in .5s;
   cursor: pointer;
 }
 
@@ -191,7 +211,7 @@ header .dropdown {
   padding: 35px 5px 15px 5px;
   background: darkgray;
   border-radius: 5px;
-  transition: all 0.5s ease;
+  transition: all ease-in .5s;
   gap: 5px;
   box-shadow: inset 2px 2px 15px rgba(0, 0, 0, .4);
 }
@@ -211,6 +231,7 @@ header .dropdown {
   text-decoration: none;
   display: block;
   border: 1.3px solid var(--bg-color);
+  transition: all ease-in .5s;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -254,8 +275,8 @@ header .dropdown {
   position: fixed;
   right: 0;
   top: 0;
-  background: black;
   border: 2px solid var(--bg-color);
+  transition: all ease-in .5s;
   border-radius: 0 0 0 5px;
   z-index: 9;
 }
@@ -265,7 +286,7 @@ header .dropdown {
 .bar3 {
   width: 33px;
   height: 3px;
-  background-color: rgba(250, 250, 250, 1);
+  background-color: var(--text-color);
   border-radius: 15px;
   margin: 6px;
   transition: .5s;
@@ -328,7 +349,6 @@ header .dropdown {
 .container {
   margin: 70px 50px 50px 50px;
   display: flex;
-  background-color: #000;
   flex-direction: column;
   padding-top: 100px;
 }
@@ -336,15 +356,16 @@ header .dropdown {
 .container .welcom {
   display: flex;
   justify-content: center;
-  color: whitesmoke;
 }
 
 .container .welcom span {
   font-family: Monofett;
-  color: black;
+  color: var(--text-color-1);
+  transition: all ease-in .5s;
   font-size: 25px;
   letter-spacing: 5px;
-  text-shadow: 1px 1px 4px rgba(250, 250, 250, .7);
+  text-shadow: 1px 1px 4px var(--text-color);
+  opacity: .7;
 }
 
 .container .banner {
@@ -372,18 +393,20 @@ header .dropdown {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px double black;
+  border: 5px double var(--body-color);
   border-radius: 50%;
   width: 240px;
   height: 240px;
   padding: 5px;
   background-color: var(--bg-color);
+  transition: all ease-in .5s;
   opacity: .8;
 }
   
 .jam_analog {
   background-image: url(/images/logo.png);
-  background-color: black;
+  background-color: var(--body-color);
+  transition: all ease-in .5s;
   background-position: center;
   background-size: 100%;
   box-shadow: inset 15px 5px 25px var(--bg-color);
@@ -398,6 +421,8 @@ header .dropdown {
 .angka12,.angka6,.angka9,.angka3 {
   font-weight: bolder;
   opacity: .7;
+  color: var(--text-color);
+  transition: all ease-in .5s;
 }
 
 .angka12 {
@@ -446,6 +471,7 @@ header .dropdown {
   width: 24px;
   height: 24px;
   background: var(--bg-color);
+  transition: all ease-in .5s;
   border: 4px solid #000;
   position: absolute;
   top: 50%;
@@ -459,6 +485,7 @@ header .dropdown {
   height: 2px;
   border-radius: 1px;
   background: var(--bg-color);
+  transition: all ease-in .5s;
   border: none;
 }
 
@@ -477,6 +504,7 @@ header .dropdown {
   /* jam digital */
 .jam_digital {
 	border: 2px double var(--bg-color);
+	transition: all ease-in .5s;
 	border-radius: 5px;
 	display: flex;
 	gap: 10px;
@@ -488,7 +516,8 @@ header .dropdown {
 }
 
 .kotak p {
-	color: whitesmoke;
+	color: var(--text-color);
+	transition: all ease-in .5s;
 	font-family: 'Teko', sans-serif;
 	font-size: 20px;
 	font-weight: bolder;
@@ -496,6 +525,7 @@ header .dropdown {
 
 .kotak #detik {
   color: var(--bg-color);
+  transition: all ease-in .5s;
 }
 
 .banner .sub-hero {
@@ -507,14 +537,19 @@ header .dropdown {
 .sub-hero .slogan {
   font-size: 25px;
   font-weight: bold;
+  color: var(--text-color);
+  transition: all ease-in .5s;
 }
 
 .sub-hero .sub-slogan {
   font-size: 12px;
+  color: var(--text-color);
+  transition: all ease-in .5s;
 }
 
 .sub-hero .sub-slogan > b {
   color: var(--bg-color);
+  transition: all ease-in .5s;
 }
 
 .btn-chat .button {
@@ -522,6 +557,7 @@ header .dropdown {
   border-radius: 18px;
   border: 2px solid rgba(250, 250, 250, .7);
   background-color: var(--bg-color);
+  transition: all ease-in .5s;
   text-decoration: none;
   cursor: pointer;
 }
@@ -546,15 +582,16 @@ header .dropdown {
   flex-direction: column;
   padding-top: 110px;
   gap: 25px;
-  color: rgba(250,250,250, .8)
 }
 
 .sub-about {
-  color: rgba(250, 250, 250, .7);
+  color: var(--text-color);
+  transition: all ease-in .5s;
   display: flex;
   justify-content: center;
   font-size: 20px;
   font-family: 'Teko';
+  opacity: .7;
 }
 
 .hero-about {
@@ -568,6 +605,7 @@ header .dropdown {
   height: 100px;
   border-radius: 50%;
   border: 3px double var(--bg-color);
+  transition: all ease-in .5s;
 }
 
 .about {
@@ -577,17 +615,23 @@ header .dropdown {
   padding: 10px;
   border-left: 1px solid rgba(250, 250, 250, .7);
   box-shadow: var(--box-shadow);
+  transition: all ease-in .5s;
 }
 
 .about h4 {
   font-size: 2em;
   margin-bottom: 18px;
-  color: whitesmoke;
+  color: var(--text-color);
+  transition: all ease-in .5s;
+  opacity: .8;
   text-shadow: 1px 2px 5px gray;
 }
 
 .about span {
   font-size: 15px;
+  color: var(--text-color);
+  transition: all ease-in .5s;
+  opacity: .8;
 }
 /*about end*/
 
@@ -601,7 +645,9 @@ header .dropdown {
 }
 
 .sub-galeri {
-  color: rgba(250, 250, 250, .7);
+  color: var(--text-color);
+  transition: all ease-in .5s;
+  opacity: .7;
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -627,6 +673,7 @@ header .dropdown {
 
 .foto h5 {
   color: var(--bg-color);
+  transition: all ease-in .5s;
   position: absolute;
   left: 0;
   top: 0;
@@ -637,7 +684,6 @@ header .dropdown {
 .foto a {
   width: 100px;
   height: 130px;
-  transition: alease-in-out .5 8s;
   cursor: pointer;
 }
 
@@ -645,6 +691,7 @@ header .dropdown {
   width: 100%;
   height: 100%;
   box-shadow: var(--box-shadow);
+  transition: all ease-in .5s;
   border-radius: 3px;
 }
 
@@ -657,6 +704,7 @@ header .dropdown {
   border: 2px solid var(--bg-color);
   box-shadow: 10px 25px 30px rgba(250, 250, 250, 0.3);
   background-color: var(--bg-color);
+  transition: all ease-in .5s;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -709,6 +757,7 @@ header .dropdown {
 
 .vidioKu h5 {
   color: var(--bg-color);
+  transition: all ease-in .5s;
   position: absolute;
   left: 0;
   top: 0;
@@ -725,6 +774,7 @@ header .dropdown {
   width: 100px;
   height: 100px;
   box-shadow: var(--box-shadow);
+  transition: all ease-in .5s;
   border-radius: 3px;
 }
 /*gallery end*/
@@ -740,7 +790,9 @@ header .dropdown {
 }
 
 .sub-kontak {
-  color: rgba(250, 250, 250, .7);
+  color: var(--text-color);
+  transition: all ease-in .5s;
+  opacity: .7;
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -766,9 +818,10 @@ header .dropdown {
   flex-direction: column;
   gap: 10px;
   border: 1px solid rgba(250, 250, 250, .7);
-  box-shadow: 1px 5px 30px rgba(250, 250, 250, 0.3);
+  box-shadow: 1px 5px 30px rgba(250, 250, 250, .3);
   border-radius: 5px;
   padding: 7px;
+  transition: all ease-in .5s;
 }
 
 .list-contact {
@@ -779,13 +832,15 @@ header .dropdown {
 
 .list-contact > span {
   font-size: 12px;
-  color: rgba(250, 250, 250, .6);
+  color: var(--text-color);
+  transition: all ease-in .5s;
+  opacity: .6;
 }
 
 .peta {
   display: flex;
   flex: 1;
-  border: 2px solid rgba(250, 250, 250, .7);
+  border: 2px solid var(--text-color);
   box-shadow: 10px 25px 30px rgba(250, 250, 250, 0.3);
 }
 
@@ -794,7 +849,7 @@ iframe {
 }
 /*contact end*/
 
-/* styling the outer music container */
+/* music start */
 .my-music {
   position: fixed;
   left: 0;
@@ -804,6 +859,7 @@ iframe {
   width: 40%;
   z-index: 9;
   background-color: var(--bg-color);
+  transition: all ease-in .5s;
   padding: 0 5px 0 0;
   border-radius: 0 5px 0 0;
 }
@@ -816,7 +872,8 @@ iframe {
   justify-content: space-between;
   padding: 15px 15px;
   position: relative;
-  background: black;
+  background-color: var(--body-color);
+  transition: all ease-in .5s;
   width: 100%;
 }
 
@@ -825,10 +882,11 @@ iframe {
   width: 90px;
 }
 
-/* styling the image to look like a disc by placing a small circle in it*/
+/* styling the image to look like a disc by placing a small circle in it */
 .img-container::after {
   content: '';
   background-color: var(--bg-color);
+  transition: all ease-in .5s;
   box-shadow: inset 1px 1px 10px rgba(0,0,0, .5);
   border-radius: 50%;
   position: absolute;
@@ -843,6 +901,7 @@ iframe {
 .img-container img {
   border-radius: 50%;
   border: 1px solid var(--bg-color);
+  transition: all ease-in .5s;
   object-fit: cover;
   height: 90px;
   width: inherit;
@@ -883,7 +942,8 @@ iframe {
   font-size: 15px;
   cursor: pointer;
   margin: 0 20px;
-  color: whitesmoke;
+  color: var(--text-color);
+  transition: all ease-in .5s;
   background: none;
 }
 
@@ -899,6 +959,7 @@ iframe {
 /* styling the music-info div by placing it under the music container */
 .music-info {
   background-color: var(--bg-color);
+  transition: all ease-in .5s;
   border-radius: 0 50px 0 0;
   position: absolute;
   top: 0;
@@ -943,6 +1004,42 @@ iframe {
   width: 0%;
   transition: width 0.1s linear;
 }
+/*music end*/
+
+/*dark & light mode*/
+.back-color {
+  position: fixed;
+  top: 10px;
+  left: 165px;
+  display: flex;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 3px;
+  z-index: 99;
+}
+
+.colorBtn {
+  transition: all ease-in .5s;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.colorBtn.dark {
+  display: none;
+}
+
+.light .colorBtn.dark {
+  display: block;
+}
+
+.light .colorBtn.light {
+  display: none;
+}
+
+.color-dark, .color-light {
+  color: var(--text-color);
+}
 
 /*footer*/
 footer {
@@ -953,6 +1050,7 @@ footer {
 
 footer span {
   color: var(--bg-color);
+  transition: all ease-in .5s;
   font-size: 10px;
   font-weight: bolder;
   opacity: .7;
@@ -975,9 +1073,10 @@ footer span {
     top: 0;
     left: 0;
     flex-direction: column;
-    background-color: black;
+    background-color: var(--body-color);
     padding: 4.9px;
     border: 2px solid var(--bg-color);
+    transition: all ease-in .5s;
     border-radius: 0 0 0 0;
     z-index: 99;
   }
@@ -992,7 +1091,8 @@ footer span {
     left: 0;
     top: 105px;
     border: 2px solid var(--bg-color);
-    background-color: black;
+    background-color: var(--body-color);
+    transition: all ease-in .5s;
     border-radius: 0 0 5px 0;
     padding: 3.2px;
   }
@@ -1066,6 +1166,11 @@ footer span {
     border-radius: 0;
   }
   
+  /*dark & light mode*/
+  .back-color {
+    left: 410px;
+  }
+  
 }
 
 @media screen and (max-width: 500px) {
@@ -1098,6 +1203,11 @@ footer span {
   .container-galeri h5 {
     border: none;
     color: rgba(250, 250, 250, .7);
-    left: 5px;
+    left: 5px;transition: all ease-in .5s;
+  }
+  
+  /*dark & light mode*/
+  .back-color {
+    left: 230px;
   }
 }
