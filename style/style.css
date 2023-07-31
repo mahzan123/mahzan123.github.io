@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Monofett&family=Odibee+Sans&family=Teko&family=Ubuntu:wght@300;400&display=swap');
 
 :root,
@@ -1202,8 +1203,9 @@ footer span {
   
   .container-galeri h5 {
     border: none;
-    color: rgba(250, 250, 250, .7);
-    left: 5px;transition: all ease-in .5s;
+    color: var(--bg-color);
+    left: 5px;
+    transition: all ease-in .5s;
   }
   
   /*dark & light mode*/
