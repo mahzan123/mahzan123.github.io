@@ -888,7 +888,6 @@ iframe {
   content: '';
   background-color: var(--bg-color);
   transition: all ease-in .5s;
-  box-shadow: inset 1px 1px 10px rgba(0,0,0, .5);
   border-radius: 50%;
   position: absolute;
   bottom: 175%;
@@ -944,7 +943,7 @@ iframe {
   cursor: pointer;
   margin: 0 20px;
   color: var(--text-color);
-  transition: all ease-in .5s;
+  transition: all ease-in .3s;
   background: none;
 }
 
@@ -955,6 +954,7 @@ iframe {
 
 .action-btn:focus {
   outline: 0;
+  color: var(--bg-color);
 }
 
 /* styling the music-info div by placing it under the music container */
